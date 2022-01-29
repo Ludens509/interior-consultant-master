@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+::before,::after{
+    box-sizing: border-box;
+}
+
+body,html{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #181719;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+// ====================Header==========
+header
+{
+    display: flex;
+    padding-inline-start: 3%;
+    padding-top: 2%;
+    font-size: 20px;
+    font-weight: bold;
+    /*justify-content:space-between;*/ 
+}
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+  
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            margin: 0 5px;
+            a{
+                padding: 8px 15px;
+                 transition: all 0.3s ease;
+            }
+        }
+    }
+}
+nav .menu-btn i{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+nav a {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    font-size: 16px;
+}
+nav a:hover
+{
+    color: linear-gradient(126.59deg, rgb(180, 86, 86) 17.55%, #E2293F 61.14%);
+}
+nav a.active{ 
+    border-radius: 1px; 
+    border-bottom: 3px solid white;
+} 
+a.active:hover{
+    border-bottom: 3px solid #E2293F;
+}
+
+.logo{
+    padding: 5px;
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'Crimson Pro', serif;
+}
+
+//==============Body=============
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    margin:50px 50px;
+
+    .content_one{
+        width: 50%;
+        margin:50px;
+        padding: 45px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content_two{
+        margin-left: 80px;
+    }
+}
+
+ .container{
+     h4{
+         font-size: 30px;
+         font-family: 'Lora', serif;
+         margin: 20px;
+     }
+     p{
+        font-size: 'Montserrat', 'sans-serif';
+        font-size: 15px;
+        margin: 20px 100px 20px 20px;
+     }
+     
+     .read_more{
+         text-decoration: none;
+         margin: 20px 20px 0 20px;
+         color:#fff;
+         font-weight: 700;
+         font-size: 17px;
+     }
+ }
+ .container_image-interior{
+    position: relative;
+ }
+.image-interior{
+    width: 75%;
+}
+.cart{
+    position: absolute;
+    top: 85%;
+    width: 40%;
+    height: 35%;
+    transform: translateX(80%);
+    background: #181719;
+    box-shadow: 0px 4px 4px rgba(0 ,0 ,0 ,.25);
+        .profile-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-img{
+            width: 15%;
+            border-radius: 40px;
+            margin: 20px;
+        }
+        .profile-name{
+            display: flex;
+            flex-direction: column;
+        }
+}
+.profile-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .name{
+        font-size: 14px;
+        margin-top: 5px;
+        color: rgb(148, 144, 144);
+    }
+}
+
+.cart-assignment{
+    margin: 0px 20% 0px 10%;
+    font-size: 20px;
+    font-family: "lora", "serif";
+}
+.footer{
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0 0 0;
+}
+
+@media screen and (max-width:1000px) {
+    nav{
+        padding: 0 20px 0 10px;
+        overflow: hidden;
+    }
+    .cart{
+        position: absolute;
+        top: 85%;
+        width: 80%;
+        height: 55%;
+        transform: translateX(15%);
+
+        .cart-assignment{
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    nav .menu-btn i{
+        display: block;
+    }
+    #click:checked~.menu-btn i:before{
+        content:"\f00d";
+    }
+    
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background:#181719;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: block;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li a{
+        width: 100%;
+        margin-left: -100%;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+        margin-left: 0px;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        height: 0;
+
+        .content_one{
+            width: 100%;
+            margin: 0;
+            padding:0;
+        }
+        .content_two{
+            margin: 20px 0 0 0;
+        }
+        p{
+            margin: 20px 125px 20px 20px;
+        }
+    }
+    .container_image-interior{
+        text-align: center;
+        .image-interior{
+            width: 90%;
+        }
+    }
+
+    .cart{
+        position: absolute;
+        top: 85%;
+        width: 80%;
+        height: 55%;
+        transform: translateX(15%);
+
+        .cart-assignment{
+            font-size: 25px;
+            text-align: left;
+        }
+    }
+   .footer{
+    padding: 170% 0 0 0;
+    font-family: "Montserrat, "sans-serif;
+   }
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
