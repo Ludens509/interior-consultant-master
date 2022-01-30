@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](https://imgur.com/0mj9mZ2)
+![screenshot]([img]https://i.imgur.com/0mj9mZ2.jpg[/img])
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
