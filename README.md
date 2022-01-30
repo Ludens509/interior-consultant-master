@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{interior=consultanr-master}</h1>
+<h1 align="center">interior=consultant-master</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](https://imgur.com/0mj9mZ2)
+![screenshot](https://imgur.com/a/Vojr5A8)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
